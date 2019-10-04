@@ -48,10 +48,23 @@
 <h1>Tietokanta-demo</h1>
 <p>@ViewBag.AsiakkaidenLkm</p>
 
-@foreach (AspNetWebApplication.Models.Customers asiakas in ViewBag.KaikkiAsiakkaat)
-{
-    <p>@asiakas.CompanyName</p>
-}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Yrityksen nimi</th>
+            <th>Kontaktihenkilö</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AspNetWebApplication.Models.Customers asiakas in ViewBag.KaikkiAsiakkaat)
+        {
+        <tr>
+            <td>@asiakas.CompanyName</td>
+            <td>@asiakas.ContactName</td>
+        </tr>
+        }
+    </tbody>
+</table>
 
 
 
