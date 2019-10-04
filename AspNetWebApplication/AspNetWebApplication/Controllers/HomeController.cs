@@ -15,6 +15,11 @@ namespace AspNetWebApplication.Controllers
     {
         public IActionResult Index()
         {
+            NorthwindContext context = new NorthwindContext();
+            int lkm = context.Customers.Count();
+
+            ViewBag.AsiakkaidenLkm = lkm;
+
             return View();
         }
 
