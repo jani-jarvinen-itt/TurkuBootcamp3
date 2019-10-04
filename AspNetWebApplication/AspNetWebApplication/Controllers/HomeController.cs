@@ -15,10 +15,15 @@ namespace AspNetWebApplication.Controllers
     {
         public IActionResult Index()
         {
+            // asiakkaiden lukumäärä
             NorthwindContext context = new NorthwindContext();
             int lkm = context.Customers.Count();
-
             ViewBag.AsiakkaidenLkm = lkm;
+
+
+            // listaus asiakkaista (generic type)
+            List<Customers> asiakkaat = context.Customers.ToList();
+            ViewBag.KaikkiAsiakkaat = asiakkaat;
 
             return View();
         }

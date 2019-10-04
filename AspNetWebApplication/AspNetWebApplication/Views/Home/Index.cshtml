@@ -48,6 +48,24 @@
 <h1>Tietokanta-demo</h1>
 <p>@ViewBag.AsiakkaidenLkm</p>
 
+@foreach (AspNetWebApplication.Models.Customers asiakas in ViewBag.KaikkiAsiakkaat)
+{
+    <p>@asiakas.CompanyName</p>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>Silmukka-esimerkki</h1>
 
 @for (int laskuri = 1; laskuri <= 10; laskuri++)
