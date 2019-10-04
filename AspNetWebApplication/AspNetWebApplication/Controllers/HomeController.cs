@@ -8,6 +8,9 @@ using AspNetWebApplication.Models;
 
 namespace AspNetWebApplication.Controllers
 {
+    /// <summary>
+    /// Tämä on oma kontrolleri-luokkani....
+    /// </summary>
     public class HomeController : Controller
     {
         public IActionResult Index()

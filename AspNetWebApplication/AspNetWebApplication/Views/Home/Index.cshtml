@@ -2,7 +2,91 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!--
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<p id="tärkeä-huomatus" style="color: blue;">
+    Oma tekstiä...
+</p>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border-bottom-width: 10px;">
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>twitter</td>
+        </tr>
+    </tbody>
+</table>
+
+-->
+
+<h1>Silmukka-esimerkki</h1>
+
+@for (int laskuri = 1; laskuri <= 10; laskuri++)
+{
+    if (laskuri % 2 == 1)
+    {
+        <p><strong>@laskuri</strong></p>
+    }
+    else
+    {
+        <p>@laskuri</p>
+    }
+}
+
+<style>
+    .table th, .table td { 
+     border-top: none !important; 
+ }
+</style>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+        </tr>
+    </tbody>
+</table>
