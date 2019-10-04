@@ -13,6 +13,32 @@ namespace AspNetWebApplication.Controllers
     /// </summary>
     public class HomeController : Controller
     {
+        private void LinqTesti()
+        {
+            int[] luvut = { 7, 4, 11, 5, 2, 10, 8, 3, 9, 6, 1, 12 };
+
+            // viittä suuremmat, numerojärjestyksessä
+            List<int> suuret = (from l in luvut
+                                where l > 5
+                                orderby l
+                                select l).ToList();
+            foreach (int suuri in suuret)
+            {
+                Console.WriteLine(suuri);
+            }
+
+
+
+            //for (int laskuri = 0; laskuri < luvut.Length; laskuri++)
+            //{
+            //    if (luvut[laskuri] > 5)
+            //    {
+            //        Console.WriteLine(luvut[laskuri]);
+            //    }
+            //}
+        }
+
+
         public IActionResult Index()
         {
             // asiakkaiden lukumäärä
@@ -20,10 +46,19 @@ namespace AspNetWebApplication.Controllers
             int lkm = context.Customers.Count();
             ViewBag.AsiakkaidenLkm = lkm;
 
-
             // listaus asiakkaista (generic type)
             List<Customers> asiakkaat = context.Customers.ToList();
             ViewBag.KaikkiAsiakkaat = asiakkaat;
+
+            // haetaan suomalaiset asiakkaat
+            List<Customers> suomalaiset = (from c in context.Customers
+                                           where c.Country == "Finland"
+                                           select c).ToList();
+            ViewBag.KaikkiAsiakkaat = suomalaiset;
+
+            List<Customers> suomalaiset2 =
+                context.Customers.Where(c => c.Country == "Finland").ToList();
+
 
             return View();
         }
