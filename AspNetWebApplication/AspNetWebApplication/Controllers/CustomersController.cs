@@ -21,6 +21,20 @@ namespace AspNetWebApplication.Controllers
             return kaikki;
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public Customers ListaaYksi(string id)
+        {
+            NorthwindContext konteksti = new NorthwindContext();
+            Customers asiakas = (from c in konteksti.Customers
+                                 where c.CustomerId == id
+                                 select c).FirstOrDefault();
+
+            //Customers asiakas2 = konteksti.Customers.Find(id);
+
+            return asiakas;
+        }
+
         [HttpPost]
         [Route("")]
         public bool LisääUusi(Customers uusi)
