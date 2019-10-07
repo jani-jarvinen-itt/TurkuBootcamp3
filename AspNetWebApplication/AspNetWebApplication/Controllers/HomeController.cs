@@ -38,7 +38,11 @@ namespace AspNetWebApplication.Controllers
             //}
         }
 
-
+        public IActionResult Testi123()
+        {
+            return View();
+        }
+               
         public IActionResult Index()
         {
             // asiakkaiden lukumäärä
