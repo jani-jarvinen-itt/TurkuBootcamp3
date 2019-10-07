@@ -21,6 +21,17 @@ namespace AspNetWebApplication.Controllers
             return kaikki;
         }
 
+        [HttpPost]
+        [Route("")]
+        public bool LisääUusi(Customers uusi)
+        {
+            NorthwindContext konteksti = new NorthwindContext();
+            konteksti.Customers.Add(uusi);
+
+            konteksti.SaveChanges();
+            return true;
+        }
+
         [HttpDelete]
         [Route("")]
         public bool PoistaAsiakkaat()
