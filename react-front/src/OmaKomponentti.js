@@ -1,7 +1,21 @@
 import React from 'react';
 
 class OmaKomponentti extends React.Component {
+
+    constructor(props) {
+        console.log("OmaKomponentti.constructor()");
+        
+        super(props);
+        this.state = { asiakkaat:[] };
+    }
+
+    componentDidMount() {
+        console.log("OmaKomponentti.componentDidMount()");
+
+    }
+
     render() {
+        console.log("OmaKomponentti.render()");
 
         var taulukko = [];
         for (let index = 1; index <= 10; index++) {
@@ -9,7 +23,7 @@ class OmaKomponentti extends React.Component {
                 <td>{index}-1</td>
                 <td>{index}-2</td>
                 <td>{index}-3</td>
-            </tr>);            
+            </tr>);
         }
 
         return <div>
