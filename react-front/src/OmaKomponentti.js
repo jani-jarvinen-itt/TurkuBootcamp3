@@ -27,12 +27,17 @@ class OmaKomponentti extends React.Component {
     render() {
         console.log("OmaKomponentti.render()");
 
+        let lkm = this.state.asiakkaat.length;
         var taulukko = [];
-        for (let index = 1; index <= 10; index++) {
+        for (let index = 0; index < lkm; index++) {
+            let asiakas = this.state.asiakkaat[index];
+
             taulukko.push(<tr>
-                <td>{index}-1</td>
-                <td>{index}-2</td>
-                <td>{index}-3</td>
+                <td>{asiakas.customerId}</td>
+                <td>{asiakas.companyName}</td>
+                <td>{asiakas.contactName}</td>
+                <td>{asiakas.country}</td>
+                <td>{asiakas.phone}</td>
             </tr>);
         }
 
@@ -40,9 +45,11 @@ class OmaKomponentti extends React.Component {
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Sarake 1</th>
-                        <th>Sarake 2</th>
-                        <th>Sarake 3</th>
+                        <th>Asiakas-Id</th>
+                        <th>Yrityksen nimi</th>
+                        <th>Kontaktihenkilö</th>
+                        <th>Maa</th>
+                        <th>Puhelin</th>
                     </tr>
                 </thead>
                 <tbody>
