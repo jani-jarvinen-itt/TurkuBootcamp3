@@ -12,6 +12,11 @@ class OmaKomponentti extends React.Component {
     componentDidMount() {
         console.log("OmaKomponentti.componentDidMount()");
 
+        fetch('https://localhost:44391/api/customers/')
+            .then(response => response.json())
+            .then(json => console.log(json))
+
+        console.log("Fetch-kutsu tehty");
     }
 
     render() {
