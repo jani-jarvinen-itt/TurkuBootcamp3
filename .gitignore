@@ -6,3 +6,5 @@
 /AspNetWebApplication/AspNetWebApplication/bin/Debug/netcoreapp2.2
 /AspNetWebApplication/AspNetWebApplication/obj
 /AspNetWebApplication/AspNetWebApplication/bin/Release/netcoreapp2.2
+/AspNetWebApplication/AspNetWebApplication.Tests/bin/Debug/netcoreapp3.0
+/AspNetWebApplication/AspNetWebApplication.Tests/obj
