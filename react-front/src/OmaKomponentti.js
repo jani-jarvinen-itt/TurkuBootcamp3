@@ -13,7 +13,7 @@ class OmaKomponentti extends React.Component {
         console.log("OmaKomponentti.componentDidMount()");
 
         let reactKomponentti = this;
-        fetch('https://localhost:44391/api/customers/')
+        fetch('http://localhost:5000/api/customers/')
             .then(response => response.json())
             .then(json => {
                 console.log("Asiakas-data ladattu.");

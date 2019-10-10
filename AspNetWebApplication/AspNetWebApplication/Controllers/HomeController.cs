@@ -45,6 +45,29 @@ namespace AspNetWebApplication.Controllers
                
         public IActionResult Index()
         {
+            NorthwindContext context = new NorthwindContext();
+            List<Customers> suomalaiset = (from c in context.Customers
+                                           where c.Country == "Finland"
+                                           select c).ToList();
+
+            foreach (Customers asiakas in suomalaiset)
+            {
+                int lkm = asiakas.Orders.Count();
+                foreach (Orders tilaus in asiakas.Orders)
+                {
+
+                }
+            }
+
+
+
+
+
+
+
+
+            /*
+
             // asiakkaiden lukumäärä
             NorthwindContext context = new NorthwindContext();
             int lkm = context.Customers.Count();
@@ -63,7 +86,7 @@ namespace AspNetWebApplication.Controllers
             List<Customers> suomalaiset2 =
                 context.Customers.Where(c => c.Country == "Finland").ToList();
 
-
+    */
             return View();
         }
 
