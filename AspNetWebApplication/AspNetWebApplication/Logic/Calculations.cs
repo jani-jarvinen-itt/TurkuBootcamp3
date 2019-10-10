@@ -11,5 +11,20 @@ namespace AspNetWebApplication.Logic
         {
             return a + b;
         }
+
+        public int Erotus(int a, int b)
+        {
+            return a - b;
+        }
+
+        public int Tulo(int a, int b)
+        {
+            return a * b;
+        }
+
+        public int Osamäärä(int a, int b)
+        {
+            return a / b;
+        }
     }
 }
