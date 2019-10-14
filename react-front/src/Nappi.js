@@ -4,7 +4,12 @@ class Nappi extends React.Component {
 
     render() {
 
-        return <button className="btn btn-info">
+        let cssMääritys = "btn btn-info";
+        if (this.props.väri != undefined) {
+            cssMääritys = "btn btn-" + this.props.väri;
+        }
+
+        return <button className={cssMääritys}>
             {this.props.teksti}
             </button>
     }

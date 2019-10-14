@@ -7,8 +7,8 @@ import Nappi from './Nappi';
 function App() {
   return (
     <div className="App">
-      <Nappi teksti="Oma Nappi" />
-      <Nappi teksti="Lataa tiedot" />
+      <Nappi teksti="Oma Nappi" väri="info" />
+      <Nappi teksti="Lataa tiedot" väri="danger" />
       <Nappi teksti="Tallenna" />
       <Nappi teksti="Peruuta" />
       <OmaKomponentti />
