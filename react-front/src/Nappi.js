@@ -9,7 +9,9 @@ class Nappi extends React.Component {
             cssMääritys = "btn btn-" + this.props.väri;
         }
 
-        return <button className={cssMääritys}>
+        let tyyli = { marginLeft: 20 };
+
+        return <button style={tyyli} className={cssMääritys}>
             {this.props.teksti}
             </button>
     }
