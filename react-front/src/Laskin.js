@@ -7,6 +7,8 @@ class Laskin extends React.Component {
 
         console.log("Konstruktorissa...");
 
+        this.state = { luku1: "", luku2: "" };
+
         this.luku1Muuttui = this.luku1Muuttui.bind(this);
         this.luku2Muuttui = this.luku2Muuttui.bind(this);
         this.nappiaKlikattu = this.nappiaKlikattu.bind(this);
@@ -34,8 +36,8 @@ class Laskin extends React.Component {
     render() {
         return <div>
             <h1>Lomake-testi</h1>
-            <p> <input type="text" onChange={this.luku1Muuttui} /> </p>
-            <p> <input type="text" onChange={this.luku2Muuttui} /> </p>
+            <p> <input type="number" onChange={this.luku1Muuttui} /> </p>
+            <p> <input type="number" onChange={this.luku2Muuttui} /> </p>
             <p> <button onClick={this.nappiaKlikattu}>Laske</button> </p>
         </div>;
     }
