@@ -44,7 +44,7 @@ class OmaKomponentti extends React.Component {
                 continue;
             }
 
-            taulukko.push(<tr>
+            taulukko.push(<tr key={index}>
                 <td>{asiakas.customerId}</td>
                 <td>{asiakas.companyName}</td>
                 <td>{asiakas.contactName}</td>
