@@ -13,7 +13,7 @@ class OmaKomponentti extends React.Component {
         console.log("OmaKomponentti.componentDidMount()");
 
         let reactKomponentti = this;
-        fetch('http://localhost:5000/api/customers/')
+        fetch('https://localhost:44391/api/customers/')
             .then(response => response.json())
             .then(json => {
                 console.log("Asiakas-data ladattu.");
@@ -27,10 +27,22 @@ class OmaKomponentti extends React.Component {
     render() {
         console.log("OmaKomponentti.render()");
 
+        // sivutus
+        let alkuIndeksi = 50;
+        let loppuIndeksi = 60;
+
         let lkm = this.state.asiakkaat.length;
         var taulukko = [];
         for (let index = 0; index < lkm; index++) {
             let asiakas = this.state.asiakkaat[index];
+
+            // sivutus
+            if (index < alkuIndeksi) {
+                continue;
+            }
+            if (index > loppuIndeksi) {
+                continue;
+            }
 
             taulukko.push(<tr>
                 <td>{asiakas.customerId}</td>
