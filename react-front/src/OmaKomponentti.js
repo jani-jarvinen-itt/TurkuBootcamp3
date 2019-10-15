@@ -54,7 +54,7 @@ class OmaKomponentti extends React.Component {
         }
 
         return <div>
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th>Asiakas-Id</th>
