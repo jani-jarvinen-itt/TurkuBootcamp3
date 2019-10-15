@@ -5,7 +5,7 @@ class Nappi extends React.Component {
     render() {
 
         let cssMääritys = "btn btn-info";
-        if (this.props.väri != undefined) {
+        if (this.props.väri !== undefined) {
             cssMääritys = "btn btn-" + this.props.väri;
         }
 
